@@ -107,13 +107,36 @@ const Folder = ({
               style={
                 open
                   ? ({
-                    "--magnet-x": `${paperOffsets[i]?.x || 0}px`,
-                    "--magnet-y": `${paperOffsets[i]?.y || 0}px`,
-                  })
+                      "--magnet-x": `${paperOffsets[i]?.x || 0}px`,
+                      "--magnet-y": `${paperOffsets[i]?.y || 0}px`,
+                    })
                   : {}
               }
             >
-              {item}
+              {item && item.link ? (
+                open ? (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      color: "inherit",
+                      textDecoration: "none",
+                      display: "block",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  >
+                    {item.content}
+                  </a>
+                ) : (
+                  <span style={{ display: "block", width: "100%", height: "100%" }}>
+                    {item.content}
+                  </span>
+                )
+              ) : (
+                item && item.content
+              )}
             </div>
           ))}
           <div className="folder__front"></div>

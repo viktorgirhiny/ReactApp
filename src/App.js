@@ -30,7 +30,16 @@ function App() {
 
 
       <div style={{ height: '600px', position: 'relative', top: '30vh', left: '70vw' }}>
-        <Folder size={1.5} color="#00d8ff" className="custom-folder" />
+        <Folder
+  size={1.5}
+  color="#00d8ff"
+  className="custom-folder"
+  items={[
+    { link: "https://example.com/1", content: "" },
+    { link: "https://example.com/2", content: "" },
+    { link: "https://example.com/3", content: "" },
+  ]}
+/>
       </div>
 
       <p style={{ fontSize: '30px', position: 'relative', top: '-50px' }}>Gyere le!!</p>
@@ -118,7 +127,7 @@ function App() {
 
 
 
-      <SplashCursor />
+      {/* <SplashCursor /> */}
     </div>
   );
 }
