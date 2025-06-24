@@ -85,7 +85,7 @@ function App() {
 
 
 
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '50px'}}>
+        {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '50px'}}>
       <ProfileCard
         name="Javi A. Torres"
         title="Software Engineer"
@@ -121,7 +121,7 @@ function App() {
         enableTilt={true}
         onContactClick={() => console.log('Contact clicked')}
       />
-        </div>
+        </div> */}
 
         <div></div>
 
