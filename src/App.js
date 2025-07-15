@@ -4,14 +4,15 @@ import TrueFocus from './components/TrueFocus';
 import SplashCursor from './components/SplasCursor';
 import Folder from './components/Folder';
 import Stepper, { Step } from './components/Stepper';
-import ProfileCard from './components/ProfileCard'
+import ProfileCard from './components/ProfileCard';
+import SplitText from "./components/SplitText";
 
 
 function App() {
   return (
     <div className="App" style={{ backgroundColor: '#222222', color: 'white', paddingBottom: '100px' }}>
 
-      <main>
+      {/* <main>
         <TrueFocus
           sentence="Vidd felém az egeret!"
           manualMode={true}
@@ -20,26 +21,38 @@ function App() {
           animationDuration={0.3}
           pauseBetweenAnimations={1}
         />
-      </main>
+      </main> */}
 
 
 
-
+      <SplitText
+        text="Üdvözöllek nálunk!"
+        className="text-2xl font-semibold"
+        delay={120}
+        duration={0.6}
+        ease="power3.out"
+        splitType="chars"
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        threshold={0.1}
+        rootMargin="-100px"
+        textAlign="center"
+      />
 
 
 
 
       <div style={{ height: '600px', position: 'relative', top: '30vh', left: '70vw' }}>
         <Folder
-  size={1.5}
-  color="#00d8ff"
-  className="custom-folder"
-  items={[
-    { link: "https://example.com/1", content: "" },
-    { link: "https://example.com/2", content: "" },
-    { link: "https://example.com/3", content: "" },
-  ]}
-/>
+          size={1.5}
+          color="#00d8ff"
+          className="custom-folder"
+          items={[
+            { link: "https://example.com/1", content: "" },
+            { link: "https://example.com/2", content: "" },
+            { link: "https://example.com/3", content: "" },
+          ]}
+        />
       </div>
 
       <p style={{ fontSize: '30px', position: 'relative', top: '-50px' }}>Gyere le!!</p>
@@ -85,7 +98,7 @@ function App() {
 
 
 
-        {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '50px'}}>
+      {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '50px'}}>
       <ProfileCard
         name="Javi A. Torres"
         title="Software Engineer"
@@ -123,7 +136,7 @@ function App() {
       />
         </div> */}
 
-        <div></div>
+      <div></div>
 
 
 
